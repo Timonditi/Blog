@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
     def index
+        render json: @posts
     end
     
     def show

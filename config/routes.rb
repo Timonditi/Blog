@@ -1,12 +1,23 @@
 Rails.application.routes.draw do
-  resources :comments
-  resources :posts
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # resources :comments
+  # resources :posts
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
-  get "up" => "rails/health#show", as: :rails_health_check
+  # get "up" => "rails/health#show", as: :rails_health_check
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  get "/post", to:"posts#index"
+  get "/post/new", to:"posts#new"
+  get "/post/:id", to:"posts#show"
+  post "/post", to:"posts#create"
+  patch "/post", to:"posts#update"
+  delete "/post/:id", to:"posts#destroy"
+
+  get "/comment", to:"comments#create"
+  delete "/comment/:id", to:"comments#destroy"
+
+
+
+
 end
