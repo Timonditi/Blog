@@ -11,10 +11,10 @@ Rails.application.routes.draw do
   get "/post/new", to:"posts#new"
   get "/post/:id", to:"posts#show"
   post "/post", to:"posts#create"
-  patch "/post", to:"posts#update"
+  patch "/post/:id", to:"posts#update"
   delete "/post/:id", to:"posts#destroy"
 
-  get "/comment", to:"comments#create"
+  post "/comment/:id", to:"comments#create"
   delete "/comment/:id", to:"comments#destroy"
 
 
