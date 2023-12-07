@@ -1,5 +1,6 @@
 import {BrowserRouter, Routes, Route } from "react-router-dom" 
 import './App.css'
+import "flowbite"
 import Home from "./pages/Home"
 import Layout from "./Layout/Layout"
 import Login from "./pages/Login"
