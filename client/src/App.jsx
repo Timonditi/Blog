@@ -6,6 +6,8 @@ import Layout from "./Layout/Layout"
 import Login from "./pages/Login"
 import Register from "./pages/Register"
 import Addpost from "./pages/Addpost"
+import Profile from "./pages/Profile"
+import Singlepost from "./pages/Singlepost"
 
 function App() {
   return (
@@ -17,6 +19,9 @@ function App() {
         <Route path="Login" element={<Login />} />
         <Route path="Register" element={<Register />} />
         <Route path="Addpost" element={<Addpost />}/>
+        <Route path="Profile" element={<Profile />} />
+        <Route path="Singlepost" element={<Singlepost />} />
+
         </Route>
       </Routes>
       </BrowserRouter>

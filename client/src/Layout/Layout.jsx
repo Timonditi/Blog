@@ -7,8 +7,9 @@ export default function Layout() {
   return (
     <div>
       <Navbar />
-
+      <div className='container mx-auto min-h-[90vh] bg-slate-200 p-5	'>
       <Outlet />
+      </div>
       
 
 
