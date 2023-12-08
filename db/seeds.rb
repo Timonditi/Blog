@@ -1,4 +1,6 @@
 # Create posts
+user_id = User.first&.id || 1
+
 Post.create(
   title: "Shujaa, Lionesses opponents confirmed for Challenger series opener",
   image: "https://www.kru.co.ke/wp-content/uploads/2023/09/Shujaaaaa-scaled.jpg",
@@ -29,6 +31,7 @@ Post.create(
   Pool B: China, Czech Republic, Mexico, Kenya
   
   Pool C: Poland, Hong Kong, Paraguay, Argentina",
+  user_id: user_id,
   created_at: Time.current,
   updated_at: Time.current
 )
@@ -47,6 +50,7 @@ Post.create(
   Masinde Muliro were made to work for the 36-17 victory over JKUAT Cougars.
   
   Mean Machine were not in action this past weekend.",
+  user_id: user_id,
   created_at: Time.current,
   updated_at: Time.current
 )
@@ -59,6 +63,7 @@ Post.create(
   The Secretary-General position also had three candidates, and Victor Oduor emerged as the winner with eight votes, earning a four-year term. Innocent Kimathi obtained seven votes, while Collins Nabiswa received no votes.
   Two candidates contested the Honorary Treasurer position, with Alice Zawadi Mulewa retaining her position with ten votes and earning a four-year term. Edwin Kagota received five votes.
   In addition to these, there were appointments that saw the retention of Constant Cap as a technical member and the appointment of three trustees, namely Damas Ogwe, Lameck Ongati, and James Njeru. KRU Director Leslie Mwangale was in attendance at the meeting.",
+  user_id: user_id,
   created_at: Time.current,
   updated_at: Time.current
 )
@@ -73,6 +78,7 @@ Post.create(
   German squad to Nairobi
   
   Sean Armstrong, Raynor Parkinso, Timo Vollenkemper, Kehoma Brenner, Jaco Otto, Jarrid Els, Harris Aounallah, Dale Garner, Michael Poppmeier, Jörn Schröder, Pirmin Stöhr, Luis Ball, Antony Dickinson, Chris Howells, Ben Ellermann, Daniel Cook, Jamie Murphy, Marcel Coetzee, Erik Marks, Damien Tussac, Tim Menzel, Mikael Tyumenev, Julius Nostadt, Christopher Hilsenbeck, Dasch Barber, Samy Füchsel, Mathieu Ducau, Felicien Vergnon, Marcel Henn.",
+  user_id: user_id,
   created_at: Time.current,
   updated_at: Time.current
 )
@@ -83,6 +89,7 @@ Post.create(
   content: "Saturday’s 30-29 loss to Germany has seen the Simbas drop to 26th in the latest World Rugby rankings.
 
   Germany have, as a result of the victory, risen to 22nd in the rankings",
+  user_id: user_id,
   created_at: Time.current,
   updated_at: Time.current
 )
@@ -95,6 +102,55 @@ Post.create(
   Olouch returns to Uganda after nine months of stay with the Ngong Road Based side. The backrower was signed by immediate former  Quins Head Coach Charles Cardovillis in the December 2018 mid transfer window.
   
   He went to help the side reach Kenya Cup and Enterprise Cup semis. The Ugandan side confirmed Olouch return through their official social media pages.",
+  user_id: user_id,
+  created_at: Time.current,
+  updated_at: Time.current
+)
+
+# user seed
+User.create(
+  username: "Tim",
+  email: "todongoonditi@gmail.com",
+  profile_image: "https://avatars.githubusercontent.com/u/92398036?v=4",
+  password_digest: "timodongo",
+  is_admin: "true",
+  created_at: Time.current,
+  updated_at: Time.current
+)
+
+User.create(
+  username: "flo",
+  email: "atienofloonditi@gmail.com",
+  profile_image: "",
+  password_digest: "16nov1995!",
+  is_admin: "true",
+  created_at: Time.current,
+  updated_at: Time.current
+)
+User.create(
+  username: "juliet",
+  email: "akothjulietonditi@gmail.com",
+  profile_image: "",
+  password_digest: "kolombo",
+  is_admin: "true",
+  created_at: Time.current,
+  updated_at: Time.current
+)
+User.create(
+  username: "debi",
+  email: "debijack@gmail.com",
+  profile_image: "",
+  password_digest: "debijack",
+  is_admin: "true",
+  created_at: Time.current,
+  updated_at: Time.current
+)
+User.create(
+  username: "maryann",
+  email: "maryannonditi@gmail.com",
+  profile_image: "",
+  password_digest: "paxilee",
+  is_admin: "true",
   created_at: Time.current,
   updated_at: Time.current
 )

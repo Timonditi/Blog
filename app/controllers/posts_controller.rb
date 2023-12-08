@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-    # skip_before_action :verify_authenticity_token
 
     def index
         posts = Post.all
@@ -16,9 +15,9 @@ class PostsController < ApplicationController
     end  
     
     def create
-        post = Post.create(title: params[:title], image: params[:image_url], content: params[:content])
+        post = Post.create(post_params)
+
         if post.valid?
-            post = Post.create(title: params[:title], image: params[:image_url], content: params[:content], user )
             render json: post, status: :created
           else
             render json: { errors: post.errors.full_messages }, status: :unprocessable_entity
@@ -49,7 +48,8 @@ class PostsController < ApplicationController
     end    
 
     private
-
     def post_params
-    end    
+        params.permit(:title, :image_url, :content, :user_id)
+    end
+   
 end
