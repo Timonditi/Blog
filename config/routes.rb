@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   # resources :comments
   # resources :posts
 
@@ -16,6 +17,13 @@ Rails.application.routes.draw do
 
   post "/comment/:id", to:"comments#create"
   delete "/comment/:id", to:"comments#destroy"
+
+  get "/user", to:"users#index"
+  get "/user/new", to:"users#new"
+  get "/user/:id", to:"users#show"
+  post "/user", to:"users#create"
+  patch "/user/:id", to:"users#update"
+  delete "/user/:id", to:"users#destroy"
 
 
 

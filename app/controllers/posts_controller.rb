@@ -17,7 +17,8 @@ class PostsController < ApplicationController
     
     def create
         post = Post.create(title: params[:title], image: params[:image_url], content: params[:content])
-        if post.save
+        if post.valid?
+            post = Post.create(title: params[:title], image: params[:image_url], content: params[:content], user )
             render json: post, status: :created
           else
             render json: { errors: post.errors.full_messages }, status: :unprocessable_entity
