@@ -108,49 +108,60 @@ Post.create(
 )
 
 # user seed
-User.create(
+# Use BCrypt to hash passwords
+hashed_password_tim = BCrypt::Password.create('timodongo')
+hashed_password_flo = BCrypt::Password.create('16nov1995!')
+hashed_password_juliet = BCrypt::Password.create('kolombo')
+hashed_password_debi = BCrypt::Password.create('debijack')
+hashed_password_maryann = BCrypt::Password.create('paxilee')
+
+# Create users with hashed passwords
+User.create!(
   username: "Tim",
   email: "todongoonditi@gmail.com",
   profile_image: "https://avatars.githubusercontent.com/u/92398036?v=4",
-  password_digest: "timodongo",
-  is_admin: "true",
+  password_digest: hashed_password_tim,
+  is_admin: true,
   created_at: Time.current,
   updated_at: Time.current
 )
 
-User.create(
+User.create!(
   username: "flo",
   email: "atienofloonditi@gmail.com",
   profile_image: "",
-  password_digest: "16nov1995!",
-  is_admin: "true",
+  password_digest: hashed_password_flo,
+  is_admin: true,
   created_at: Time.current,
   updated_at: Time.current
 )
-User.create(
+
+User.create!(
   username: "juliet",
   email: "akothjulietonditi@gmail.com",
   profile_image: "",
-  password_digest: "kolombo",
-  is_admin: "true",
+  password_digest: hashed_password_juliet,
+  is_admin: true,
   created_at: Time.current,
   updated_at: Time.current
 )
-User.create(
+
+User.create!(
   username: "debi",
   email: "debijack@gmail.com",
   profile_image: "",
-  password_digest: "debijack",
-  is_admin: "true",
+  password_digest: hashed_password_debi,
+  is_admin: true,
   created_at: Time.current,
   updated_at: Time.current
 )
-User.create(
+
+User.create!(
   username: "maryann",
   email: "maryannonditi@gmail.com",
   profile_image: "",
-  password_digest: "paxilee",
-  is_admin: "true",
+  password_digest: hashed_password_maryann,
+  is_admin: true,
   created_at: Time.current,
   updated_at: Time.current
 )

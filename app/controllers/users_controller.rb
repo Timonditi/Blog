@@ -43,7 +43,16 @@ class UsersController < ApplicationController
         else
             render json: {error: "user you are trying to delete does not existd"}
         end  
-    end    
+    end
+    
+    def loggedin_user
+        user = User.find_by(id: session[:user_id] ) 
+        if(user)
+           render json: {loggedin: true, user: user}
+        else
+           render json: {loggedin: false}
+        end      
+      end
 
     private
 
