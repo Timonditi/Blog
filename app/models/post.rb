@@ -1,10 +1,10 @@
 class Post < ApplicationRecord
-    belongs_to :User
+    belongs_to :user
 
     has_many :comment
 
     validates :title, presence: true, uniqueness: true
     validates :image, presence: true
     validates :content, presence: true
-    validates :author, presence: true
+    validates :user_id, presence: true
 end

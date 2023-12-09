@@ -14,9 +14,8 @@ class PostsController < ApplicationController
     end
     
     def create
-        post = Post.create(title: params[:title], image: params[:image], content: params[:content], author: params[:author])
+        post = Post.create(title: params[:title], image: params[:image], content: params[:content], user_id: params[:user_id])
         if post.valid?
-            post = Post.create(title: params[:title], image: params[:image], content: params[:content], author: params[:author])
             render json: {success: "Post created successfully"}
         else
             render json: {error: post.errors.full_messages}, status: :unprocessable_entity
@@ -27,7 +26,7 @@ class PostsController < ApplicationController
         post = Post.find_by(id: params[:id])
 
         if post
-            post.update(title: params[:title], image: params[:image], content: params[:content], author: params[:author])
+            post.update(title: params[:title], image: params[:image], content: params[:content], user_id: params[:user_id])
             render json: {success: "post updated successful"}, status: :created
         else
             render json: {error: "post not found"}, status: :not_found
