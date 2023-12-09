@@ -3,13 +3,11 @@
 one:
   username: MyString
   email: MyString
-  password: MyString
   profile_image: MyString
   is_admin: false
 
 two:
   username: MyString
   email: MyString
-  password: MyString
   profile_image: MyString
   is_admin: false
