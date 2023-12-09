@@ -1,7 +1,7 @@
 class CommentsController < ApplicationController
     def create
         post = Post.find(params[:id])
-        comment = post.comments.new(comment_params)
+        comment = post.comment.new(comment_params)
     
         if comment.save
           redirect_to post_path(post), notice: 'Comment was successfully created.'
@@ -13,7 +13,7 @@ class CommentsController < ApplicationController
 
 	def destroy
         post = Post.find(params[:id])
-        comment = post.comments.find(params[:id])
+        comment = post.comment.find(params[:id])
         comment.destroy
         redirect_to post_path(post), notice: 'Comment was successfully destroyed.'
       end

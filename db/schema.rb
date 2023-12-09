@@ -23,6 +23,7 @@ ActiveRecord::Schema[7.1].define(version: 2023_12_08_213741) do
     t.string "title"
     t.string "image"
     t.text "content"
+    t.string "author"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
