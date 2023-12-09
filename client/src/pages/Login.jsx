@@ -14,7 +14,7 @@ export default function Login() {
     e.preventDefault()
     console.log(email+ " " +password)
 
-    login()
+    login(email, password)
   }
   return (
     <div className='flex justify-centre'>

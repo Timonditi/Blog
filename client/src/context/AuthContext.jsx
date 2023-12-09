@@ -4,10 +4,20 @@ export const AuthContext = createContext()
 
 export default function AuthProvider({children}) {
     // Login
-    const login = () =>{
-        console.log("Login function");
-        return "Login function"
-    }
+    const login = (email, password) =>{
+        console.log("LOGIN");
+        fetch("/login", {
+            method: "POST",
+            headers: {
+                "Content-Type" : "application/json"
+            },
+            body: JSON.stringify({email, password})
+        })
+        .then(res=>res.json())
+        .then((response)=>{
+            console.log();
+        })
+    }               
     // register
     const register = () =>{
         console.log("register function");
