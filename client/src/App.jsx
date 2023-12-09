@@ -8,11 +8,13 @@ import Register from "./pages/Register"
 import Addpost from "./pages/Addpost"
 import Profile from "./pages/Profile"
 import Singlepost from "./pages/Singlepost"
+import AuthProvider from "./context/AuthContext"
 
 function App() {
   return (
     <div>
       <BrowserRouter>
+      <AuthProvider>
       <Routes>
         <Route path="/" element={<Layout />}>
         <Route index element={<Home />}/>
@@ -24,6 +26,7 @@ function App() {
 
         </Route>
       </Routes>
+      </AuthProvider>
       </BrowserRouter>
     </div>
   )

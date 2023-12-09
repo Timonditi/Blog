@@ -8,23 +8,23 @@ export default function Home() {
     <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
         {/* Item 1 */}
         <a href="/your-link-1" className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-1.svg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+            <img src="https://www.kru.co.ke/wp-content/uploads/2023/09/Shujaaaaa-scaled.jpg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
         </a>
         {/* Item 2 */}
         <a href="/your-link-2" className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-2.svg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+            <img src="https://i0.wp.com/www.kenyacup.co.ke/wp-content/uploads/2022/12/Impala-Championship.jpg?w=1920&ssl=1" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
         </a>
         {/* Item 3 */}
         <a href="/your-link-3" className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-3.svg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+            <img src="https://www.kru.co.ke/wp-content/uploads/2021/11/Referees-768x372.jpg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
         </a>
         {/* Item 4 */}
         <a href="/your-link-4" className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-4.svg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+            <img src="https://img2.thejournal.ie/inline/3283950/original/?width=630&version=3283950" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
         </a>
         {/* Item 5 */}
         <a href="/your-link-5" className="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="/docs/images/carousel/carousel-5.svg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
+            <img src="https://scrummage.co.ke/wp-content/uploads/2022/05/download.jpg" className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..." />
         </a>
     </div>
     {/* Slider indicators */}
