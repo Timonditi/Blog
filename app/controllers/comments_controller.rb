@@ -1,14 +1,31 @@
 class CommentsController < ApplicationController
-    def create
-        post = Post.find(params[:id])
-        comment = post.comment.new(comment_params)
-    
-        if comment.save
-          redirect_to post_path(post), notice: 'Comment was successfully created.'
-        else
-          redirect_to post_path(post), alert: comment.errors.full_messages.join(', ')
-        end
-    end
+  skip_before_action :authorize, only: [:index, :show]
+
+
+  def index
+    posts = Post.all
+    render json: posts.as_json(include: :user)
+  end
+
+  def show
+      post = Post.find_by(id: params[:id])
+      if post
+          render json: post
+      else 
+          render json: {error: "post not found"}, status: :not_found
+      end        
+  end
+  
+  def create
+      post = Post.find(params[:id])
+      comment = post.comment.new(comment_params)
+  
+      if comment.save
+        redirect_to post_path(post), notice: 'Comment was successfully created.'
+      else
+        redirect_to post_path(post), alert: comment.errors.full_messages.join(', ')
+      end
+  end
     
 
 	def destroy

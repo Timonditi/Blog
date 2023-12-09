@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
+    skip_before_action :authorize, only: [:index, :show]
+
     def index
         posts = Post.all
-        render json: posts
+        render json: posts.as_json(include: :user)
     end
     
     def show
@@ -14,12 +16,18 @@ class PostsController < ApplicationController
     end
     
     def create
-        post = Post.create(title: params[:title], image: params[:image], content: params[:content], user_id: params[:user_id])
+        current_user = User.find_by(id:  session[:user_id])
+        if current_user.is_admin==true
+        
+        post = @current_user.posts.create(title: params[:title], image: params[:image], content: params[:content])
         if post.valid?
             render json: {success: "Post created successfully"}
         else
             render json: {error: post.errors.full_messages}, status: :unprocessable_entity
-        end               
+        end
+        else  
+            render json: {error: "admins can only perform such operation"}
+        end             
     end
     
     def update

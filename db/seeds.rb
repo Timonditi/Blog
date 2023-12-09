@@ -1,4 +1,5 @@
 # Create posts
+user_id = 1
 
 posts_data =[
   {
@@ -90,6 +91,7 @@ posts_data.each do |data|
     title: data[:title],
     image: data[:image],
     content: data[:content],
+    user_id: user_id,
     created_at: Time.current,
     updated_at: Time.current
   )
