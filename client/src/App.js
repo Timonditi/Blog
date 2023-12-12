@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import "./index.css"
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Layout from './Layout/Layout'
+import Home from './Pages/Home'
+import Profile from './Pages/Profile'
+import Register from './Pages/Register'
+import Singlepost from './Pages/Singlepost'
+import Addpost from './Pages/Addpost'
+import Login from './Pages/Login'
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Layout />}>
+          <Route index element={<Home />}/>
+          <Route path='Login' element={<Login />}/>
+          <Route path='Profile' element={<Profile />} />
+          <Route path='Register' element={<Register />} />
+          <Route path='Singlepost' element={<Singlepost />} />
+          <Route path='Addpost' element={<Addpost />} />
+        </Route>
+      </Routes>
+      </BrowserRouter>
     </div>
-  );
+  )
 }
-
-export default App;
