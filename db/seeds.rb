@@ -97,6 +97,7 @@ posts_data.each do |data|
   )
 end
 
+
 # user seed
 # Use BCrypt to hash passwords
 hashed_password_tim = BCrypt::Password.create('timodongo')
