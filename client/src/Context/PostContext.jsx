@@ -2,14 +2,29 @@ import { useEffect, useState } from "react";
 import {createContext } from "react";
 import { useNavigate } from "react-router-dom";
 import  Swal from "sweetalert2"
+export const PostContext = createContext()
+
+export default function PostProvider({children}) {
+    const nav = useNavigate()
+    const [post, setPost] = useState([])
+
+    useEffect(()=>{
+        fetch("/post")
+            .then((res)=>res.json())
+            .then((response)=>{
+                setPost(response)
+                console.log("post", response);
+            })
+        }, [])
 
 
-export const AuthContext = createContext()
 
-export default function AuthProvider({children}) {
+    const contextData ={
+        post,
+    }
   return (
-    <AuthContext.Provider value={contextData}>
+    <PostContext.Provider value={contextData}>
         {children}
-    </AuthContext.Provider>
+    </PostContext.Provider>
   )
 }

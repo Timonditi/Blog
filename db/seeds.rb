@@ -5,7 +5,8 @@ posts_data =[
   {
     title: "Shujaa, Lionesses opponents confirmed for Challenger series opener",
     image: "https://www.kru.co.ke/wp-content/uploads/2023/09/Shujaaaaa-scaled.jpg",
-    content: "Shujaa and Lionesses have learnt their opponents for the World Rugby Challenger Series opening round taking place in Dubai, United Arab Emirates from 12-14 January 2024.
+    content: %{
+      Shujaa and Lionesses have learnt their opponents for the World Rugby Challenger Series opening round taking place in Dubai, United Arab Emirates from 12-14 January 2024.
   
     Shujaa will face regional rivals Uganda, Germany and Mexico in Pool C of the men’s competition while the Lionesses will play out of Pool B in the women’s competition alongside China, Czech Republic and Mexico.The World Rugby Sevens Challenger provides a promotion pathway to SVNS 2025
   
@@ -31,12 +32,14 @@ posts_data =[
     
     Pool B: China, Czech Republic, Mexico, Kenya
     
-    Pool C: Poland, Hong Kong, Paraguay, Argentina"
+    Pool C: Poland, Hong Kong, Paraguay, Argentina
+    }
   },
   {
     title: "Impala begin KRU Championship campaign on a high",
     image: "https://i0.wp.com/www.kenyacup.co.ke/wp-content/uploads/2022/12/Impala-Championship.jpg?w=1920&ssl=1",
-    content: "Former Kenya Cup champions Impala started their quest for a return to the top tier with 39-5 victory over USIU Martials in KRU Championship action on Saturday 2 December 2023 at the Impala Club.
+    content: %{
+      Former Kenya Cup champions Impala started their quest for a return to the top tier with 39-5 victory over USIU Martials in KRU Championship action on Saturday 2 December 2023 at the Impala Club.
   
     Winger Quinto Ongo weighed in with 19 points off 2 tries, 1 penalty and 2 conversion with Milton Omondi, Cosmas Valentino, Brian Ochieng and Tyson Okoth landing a try each as USIU managed the solitary unconverted try.
     
@@ -46,43 +49,52 @@ posts_data =[
     
     Masinde Muliro were made to work for the 36-17 victory over JKUAT Cougars.
     
-    Mean Machine were not in action this past weekend."
+    Mean Machine were not in action this past weekend.
+    }
   },
   {
     title: "Kenya Rugby Referees elect new office bearers",
-    image: "https://www.kru.co.ke/wp-content/uploads/2021/11/Referees-768x372.jpg",
+    image: %{
+      https://www.kru.co.ke/wp-content/uploads/2021/11/Referees-768x372.jpg",
     content: "The Kenya Rugby Referee Association, an affiliate body of the Kenya Rugby Union, convened its annual Governing Council meeting on November 16th, 2023. One of the primary items on the agenda was to elect members to the positions that were stipulated in the Association’s constitution.
     Three candidates vied for the president position, with Alfred Okwemba emerging victorious with eight votes, earning him a four-year term. Dennis Wachira garnered seven votes, whereas Edward Mbugua received no votes.
     The Secretary-General position also had three candidates, and Victor Oduor emerged as the winner with eight votes, earning a four-year term. Innocent Kimathi obtained seven votes, while Collins Nabiswa received no votes.
     Two candidates contested the Honorary Treasurer position, with Alice Zawadi Mulewa retaining her position with ten votes and earning a four-year term. Edwin Kagota received five votes.
-    In addition to these, there were appointments that saw the retention of Constant Cap as a technical member and the appointment of three trustees, namely Damas Ogwe, Lameck Ongati, and James Njeru. KRU Director Leslie Mwangale was in attendance at the meeting.", 
+    In addition to these, there were appointments that saw the retention of Constant Cap as a technical member and the appointment of three trustees, namely Damas Ogwe, Lameck Ongati, and James Njeru. KRU Director Leslie Mwangale was in attendance at the meeting.
+    } 
   },
   {
     title: "Germany Land In Nairobi Ahead Of Tatu City Series Clash",
     image: "https://img2.thejournal.ie/inline/3283950/original/?width=630&version=3283950",
-    content: "Germany arrived in the country on Tuesday evening ahead of Saturday’s Tatu City Series test against Kenya at the RFUEA Ground on Saturday 27 May 2017.
+    content: %{
+      Germany arrived in the country on Tuesday evening ahead of Saturday’s Tatu City Series test against Kenya at the RFUEA Ground on Saturday 27 May 2017.
   
     The side, ranked 24th in the world, just a position below Kenya’s Simbas will hold their first training session in Nairobi on Wednesday, with their eyes trained on Saturday’s fixture which marks the start of Kenya’s international assignments for 2017.
     
     German squad to Nairobi
     
-    Sean Armstrong, Raynor Parkinso, Timo Vollenkemper, Kehoma Brenner, Jaco Otto, Jarrid Els, Harris Aounallah, Dale Garner, Michael Poppmeier, Jörn Schröder, Pirmin Stöhr, Luis Ball, Antony Dickinson, Chris Howells, Ben Ellermann, Daniel Cook, Jamie Murphy, Marcel Coetzee, Erik Marks, Damien Tussac, Tim Menzel, Mikael Tyumenev, Julius Nostadt, Christopher Hilsenbeck, Dasch Barber, Samy Füchsel, Mathieu Ducau, Felicien Vergnon, Marcel Henn.",
+    Sean Armstrong, Raynor Parkinso, Timo Vollenkemper, Kehoma Brenner, Jaco Otto, Jarrid Els, Harris Aounallah, Dale Garner, Michael Poppmeier, Jörn Schröder, Pirmin Stöhr, Luis Ball, Antony Dickinson, Chris Howells, Ben Ellermann, Daniel Cook, Jamie Murphy, Marcel Coetzee, Erik Marks, Damien Tussac, Tim Menzel, Mikael Tyumenev, Julius Nostadt, Christopher Hilsenbeck, Dasch Barber, Samy Füchsel, Mathieu Ducau, Felicien Vergnon, Marcel Henn.
+    }
   },
   {
     title: "Simbas Drop In Latest Rankings",
     image: "https://scrummage.co.ke/wp-content/uploads/2022/05/IMG_5803-",
-    content: "Saturday’s 30-29 loss to Germany has seen the Simbas drop to 26th in the latest World Rugby rankings.
+    content: %{
+      Saturday’s 30-29 loss to Germany has seen the Simbas drop to 26th in the latest World Rugby rankings.
 
-    Germany have, as a result of the victory, risen to 22nd in the rankings"
+    Germany have, as a result of the victory, risen to 22nd in the rankings
+    }
   },
   {
     title: "Heathens sign Scott Oluoch from Kenya Harlequins",
     image: "https://scrummage.co.ke/wp-content/uploads/2022/05/download.jpg",
-    content: "Ugandan Giants Heathens have confirmed the capture of backrower  Scott George Olouch from Kenya Cup side Kenya Harlequins.
+    content: %{
+      Ugandan Giants Heathens have confirmed the capture of backrower  Scott George Olouch from Kenya Cup side Kenya Harlequins.
   
     Olouch returns to Uganda after nine months of stay with the Ngong Road Based side. The backrower was signed by immediate former  Quins Head Coach Charles Cardovillis in the December 2018 mid transfer window.
     
-    He went to help the side reach Kenya Cup and Enterprise Cup semis. The Ugandan side confirmed Olouch return through their official social media pages.",
+    He went to help the side reach Kenya Cup and Enterprise Cup semis. The Ugandan side confirmed Olouch return through their official social media pages.
+    }
   }
 ]
 

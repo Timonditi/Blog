@@ -10,12 +10,14 @@ import Singlepost from './Pages/Singlepost'
 import Addpost from './Pages/Addpost'
 import Login from './Pages/Login'
 import AuthProvider from './Context/AuthContext'
+import PostProvider from './Context/PostContext'
 
 export default function App() {
   return (
     <div>
       <BrowserRouter>
       <AuthProvider>
+        <PostProvider>
         
       <Routes>
         <Route path='/' element={<Layout />}>
@@ -28,6 +30,7 @@ export default function App() {
         </Route>
 
       </Routes>
+      </PostProvider>
       </AuthProvider>
       </BrowserRouter>
     </div>
