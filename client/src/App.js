@@ -17,8 +17,7 @@ export default function App() {
     <div>
       <BrowserRouter>
       <AuthProvider>
-        <PostProvider>
-        
+      <PostProvider>        
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Home />}/>
@@ -28,7 +27,6 @@ export default function App() {
           <Route path='post/:id' element={<Singlepost />} />
           <Route path='Addpost' element={<Addpost />} />
         </Route>
-
       </Routes>
       </PostProvider>
       </AuthProvider>

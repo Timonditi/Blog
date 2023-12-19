@@ -6,21 +6,21 @@ export const PostContext = createContext()
 
 export default function PostProvider({children}) {
     const nav = useNavigate()
-    const [post, setPost] = useState([])
+    const [posts, setPosts] = useState([])
 
     useEffect(()=>{
         fetch("/post")
-            .then((res)=>res.json())
-            .then((response)=>{
-                setPost(response)
-                console.log("post", response);
-            })
-        }, [])
+        .then((res)=>res.json())
+        .then((response)=>{
+            setPosts(response)
+            console.log("post", response);
+        })
+    }, [])
 
 
 
     const contextData ={
-        post,
+        posts,
     }
   return (
     <PostContext.Provider value={contextData}>
