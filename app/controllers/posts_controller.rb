@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-    skip_before_action :authorize, only: [:index, :show]
+    skip_before_action :authorize, only: [:index]
 
     def index
         posts = Post.all
@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     def show
         post = Post.find_by(id: params[:id])
         if post
-            render json: post
+            render json: post.as_json(include: :user)
         else
             render json: {error: "post not found"}, status: :not_found
         end        
