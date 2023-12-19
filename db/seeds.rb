@@ -54,9 +54,9 @@ posts_data =[
   },
   {
     title: "Kenya Rugby Referees elect new office bearers",
-    image: %{
-      https://www.kru.co.ke/wp-content/uploads/2021/11/Referees-768x372.jpg",
-    content: "The Kenya Rugby Referee Association, an affiliate body of the Kenya Rugby Union, convened its annual Governing Council meeting on November 16th, 2023. One of the primary items on the agenda was to elect members to the positions that were stipulated in the Association’s constitution.
+    image: "https://www.kru.co.ke/wp-content/uploads/2021/11/Referees-768x372.jpg",
+    content: %{
+      The Kenya Rugby Referee Association, an affiliate body of the Kenya Rugby Union, convened its annual Governing Council meeting on November 16th, 2023. One of the primary items on the agenda was to elect members to the positions that were stipulated in the Association’s constitution.
     Three candidates vied for the president position, with Alfred Okwemba emerging victorious with eight votes, earning him a four-year term. Dennis Wachira garnered seven votes, whereas Edward Mbugua received no votes.
     The Secretary-General position also had three candidates, and Victor Oduor emerged as the winner with eight votes, earning a four-year term. Innocent Kimathi obtained seven votes, while Collins Nabiswa received no votes.
     Two candidates contested the Honorary Treasurer position, with Alice Zawadi Mulewa retaining her position with ten votes and earning a four-year term. Edwin Kagota received five votes.
@@ -77,12 +77,18 @@ posts_data =[
     }
   },
   {
-    title: "Simbas Drop In Latest Rankings",
-    image: "https://scrummage.co.ke/wp-content/uploads/2022/05/IMG_5803-",
+    title: "Nondies rally to register first win of the season",
+    image: "https://i0.wp.com/www.kenyacup.co.ke/wp-content/uploads/2022/12/Nondies-2022-Championship.jpg?w=1920&ssl=1",
     content: %{
-      Saturday’s 30-29 loss to Germany has seen the Simbas drop to 26th in the latest World Rugby rankings.
+          Trailing 16-11 early in the second half, Nondescript scored and converted three second half tries to register their first win of the season courtesy of the 32-16 result over visiting Kisumu.
 
-    Germany have, as a result of the victory, risen to 22nd in the rankings
+    Kisumu’s Washington Ochieng and Nondies Calvin Sheunda traded penalties, the match finely poised at 6-3 courtesy of Ochieng’s success rate from the kicking tee in this match day three clash at the RFUEA.
+
+    Bruce Odhiambo then grounded the 100th try of the new season to give Nondies an 8-6 lead before Ochieng and Sheunda again traded penalties, Nondies taking the 11-9 lead into the interval.
+
+    Kenya U20 winger Alvin Mwamburi scored after the restart, Ochieng converting to see Kisumu lead 16-11 before collapsing under the weight of relentless Nondies pressure.
+
+    Sheunda would convert tries from Ian Mumbwani, Oliver Tambo and Ben Saleh to claim the bonus point victory for Nondies
     }
   },
   {
