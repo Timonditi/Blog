@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { AuthContext } from '../Context/AuthContext';
 
 export default function Singlepost() {
+  const {current_user} = useContext(AuthContext)
   const { id } = useParams();
   const [post, setPost] = useState(null); // Initialize as null
 
@@ -18,6 +20,9 @@ export default function Singlepost() {
   }, [id]);
 
   return (
+    <div>
+      {
+        current_user && current_user?
     <div>
       <main className="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900 antialiased">
         <div className="flex justify-between px-4 mx-auto max-w-screen-xl ">
@@ -55,6 +60,9 @@ export default function Singlepost() {
           </article>
         </div>
       </main>
-    </div>
+    </div>:
+            <p className='text-red-900 text-centre font-bold' >Not Authorized to view this page</p>
+          }
+        </div>
   );
 }
