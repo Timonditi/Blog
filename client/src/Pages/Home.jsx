@@ -58,15 +58,15 @@ export default function Home() {
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {posts && posts.map((post) => (
-            <div className='bg-grey-100' key={post.id}>
+            <Link to={`/Post/${post.id}`} className='bg-grey-100' key={post.id}>
               <img className="h-auto max-w-full rounded-lg" src={post.image} alt="" />
               <div className='p-3'>
                 <h4 className='font-bold text-xl'>{post.title}</h4>
                 <p> Posted by {post.user.username}</p>
-                <Link to={`/Post/${post.id}`} type="button" className="text-white bg-green-700 hover:bg-green-800 focus:outline-none focus:ring-4 focus:ring-green-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Read more</Link>
+
 
               </div>
-            </div>
+            </Link>
           ))}
       </div>
     </div>
