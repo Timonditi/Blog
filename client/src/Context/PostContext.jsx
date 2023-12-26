@@ -45,11 +45,40 @@ export default function PostProvider({children}) {
         })
     }, [onChange])
 
+    const Addpost = (title, image, content) => {
+        fetch("/post", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ title, image, content }),
+        })
+          .then((res) => res.json())
+          .then((response) => {
+            console.log('added', response);
+      
+            if (response.success) {
+                nav("/")
+              Swal.fire(
+                'Success',
+                response.success,
+                'success'
+              );
+              setonChange(!onChange);
+            } else {
+              Swal.fire(
+                'Error',
+                'Something went wrong',
+                'error'
+              );
+            }
+          })
+      };
+      
 
 
     const contextData ={
         posts,
-        deletePost
+        deletePost,
+        Addpost
     }
   return (
     <PostContext.Provider value={contextData}>
