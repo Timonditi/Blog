@@ -49,11 +49,13 @@ export default function Navbar() {
                       data-dropdown-placement="bottom"
                     >
                       <span className="sr-only">Open user menu</span>
+                      <Link to="/Profile">
                       <img
                         className="w-8 h-8 rounded-full"
                         src={current_user ? current_user.profile_image : ""}
                         alt="user photo"
                       />
+                      </Link>
                     </button>
                     {/* <!-- Dropdown menu --> */}
                     <div className="relative inline-block text-left">

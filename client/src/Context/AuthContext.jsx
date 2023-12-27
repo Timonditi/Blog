@@ -101,6 +101,10 @@ export default function AuthProvider({children}) {
          setCurrentUser(null)
          setonChange(!onChange)
          console.log(response)
+         if(response.error)
+         {
+            nav("/")
+         }
         })
      }
 
