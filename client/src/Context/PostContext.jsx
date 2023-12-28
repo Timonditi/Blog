@@ -72,13 +72,27 @@ export default function PostProvider({children}) {
             }
           })
       };
+
+        // Adding Comment
+      const Addcomment = (username, comment) => {
+        fetch("/comment/${id}", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({username, comment}),
+        })
+          .then((res) => res.json())
+          .then((response) => {
+            console.log('added', response);
+          })
+      };
       
 
 
     const contextData ={
         posts,
         deletePost,
-        Addpost
+        Addpost,
+        Addcomment
     }
   return (
     <PostContext.Provider value={contextData}>
