@@ -74,8 +74,8 @@ export default function PostProvider({children}) {
       };
 
         // Adding Comment
-      const Addcomment = (username, comment) => {
-        fetch("/comment/${id}", {
+      const Addcomment = (id, username, comment) => {
+        fetch(`/comment/${id}`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({username, comment}),
