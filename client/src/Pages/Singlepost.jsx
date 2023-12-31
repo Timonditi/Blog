@@ -92,6 +92,9 @@ export default function Singlepost() {
         <form onSubmit={handleSubmit}>
           <div className="ml-80 my-16 w-2/4 mb-4  rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
               <div className="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
+              <a href="#" rel="author" className="text-xl font-bold text-gray-900 dark:text-white">
+                    {post && post.user && post.user.username}
+                  </a>
                   <label for="comment" className="sr-only">Your comment</label>
                   <textarea value={comment} onChange={(e)=> setComment(e.target.value)} rows="4" className="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400" placeholder="Write a comment..." required></textarea>
               </div>
