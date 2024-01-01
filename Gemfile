@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.7.4"
+ruby "3.2.1"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.2"
@@ -13,7 +13,7 @@ gem "sprockets-rails"
 
 gem 'rack-cors'
 
-gem 'pg'
+gem 'pg', "~> 1.5.4"
 
 
 # Use the Puma web server [https://github.com/puma/puma]
