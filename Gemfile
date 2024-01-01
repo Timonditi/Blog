@@ -13,7 +13,7 @@ gem "sprockets-rails"
 
 gem 'rack-cors'
 
-gem 'pg', "~> 1.5.4"
+# gem 'pg', "~> 1.5.4"
 
 
 # Use the Puma web server [https://github.com/puma/puma]
